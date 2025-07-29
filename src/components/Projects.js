@@ -8,28 +8,40 @@ const Projects = () => {
   const projects = [
     {
       title: 'NASA PPE Roll Out Solar Array',
-      description: 'Lead mechanical engineer for NASA\'s Personal Protective Equipment Roll Out Solar Array project. Led structural qualification testing of 10+ units and implemented NASA-STD-5019 fracture control testing program for 40+ critical metallic components.',
+      description: [
+        'Lead mechanical engineer for NASA\'s Personal Protective Equipment Roll Out Solar Array project.',
+        'Led structural qualification testing of 10+ units and implemented NASA-STD-5019 fracture control testing program for 40+ critical metallic components.'
+      ],
       image: '/ppe-pic.png',
       demo: 'https://youtu.be/0CFejld5r_I?si=s7vPR_sCzg5kOQJc',
       featured: true
     },
     {
       title: 'NASA Cygnus UltraFlex Solar Array',
-      description: 'Led 9 successful on-orbit deployments and served as primary non-conformance disposition authority. Led 48-hour emergency response team to resolve on-orbit deployment anomalies, ensuring 100% mission success.',
+      description: [
+        'Led 9 successful on-orbit deployments and served as primary non-conformance disposition authority.',
+        'Led 48-hour emergency response team to resolve on-orbit deployment anomalies, ensuring 100% mission success.'
+      ],
       image: '/cygnus-pic.png',
       demo: 'https://youtu.be/bnDeJ7saLQY?si=Ynmw3BWb4kvq5m33',
       featured: true
     },
     {
       title: 'Lucy UltraFlex Solar Array',
-      description: 'Designed and developed large displacement leaf spring mechanism and deployment motors. Supported critical anomaly resolution that identified snagged lanyard and enabled recovery strategy achieving 100% mission success.',
+      description: [
+        'Designed and developed large displacement leaf spring mechanism and deployment motors.',
+        'Supported critical anomaly resolution that identified snagged lanyard and enabled recovery strategy achieving 100% mission success.'
+      ],
       image: '/lucy-pic.png',
       demo: 'https://www.youtube.com/watch?v=6vjK9vGEw5Q',
       featured: true
     },
     {
       title: 'Commercial UltraFlex Solar Array',
-      description: 'Designed high tension, long-life torsion spring mechanism and high reliability tie-down mechanism. Led motor shock qualification campaign recovery after shock failure, achieving 100% deployment success rate across 16 flight units.',
+      description: [
+        'Designed high tension, long-life torsion spring mechanism and high reliability tie-down mechanism.',
+        'Led motor shock qualification campaign recovery after shock failure, achieving 100% deployment success rate across 16 flight units.'
+      ],
       image: '/uf-pic.png',
       demo: null,
       featured: true
@@ -216,9 +228,14 @@ const Projects = () => {
               {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {project.description}
-                </p>
+                <div className="text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+                  {project.description.map((sentence, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>{sentence}</span>
+                    </div>
+                  ))}
+                </div>
 
 
 
