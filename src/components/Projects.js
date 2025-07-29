@@ -10,7 +10,6 @@ const Projects = () => {
       title: 'NASA PPE Roll Out Solar Array',
       description: 'Lead mechanical engineer for NASA\'s Personal Protective Equipment Roll Out Solar Array project. Led structural qualification testing of 10+ units and implemented NASA-STD-5019 fracture control testing program for 40+ critical metallic components.',
       image: '/ppe-pic.png',
-      technologies: ['NASA Standards', 'Structural Testing', 'FEA', 'Fracture Control'],
       demo: 'https://youtu.be/0CFejld5r_I?si=s7vPR_sCzg5kOQJc',
       featured: true
     },
@@ -18,7 +17,6 @@ const Projects = () => {
       title: 'NASA Cygnus UltraFlex Solar Array',
       description: 'Led 9 successful on-orbit deployments and served as primary non-conformance disposition authority. Led 48-hour emergency response team to resolve on-orbit deployment anomalies, ensuring 100% mission success.',
       image: '/cygnus-pic.png',
-      technologies: ['On-Orbit Deployment', 'Anomaly Resolution', 'Mission Success', 'Aerospace'],
       demo: 'https://youtu.be/bnDeJ7saLQY?si=Ynmw3BWb4kvq5m33',
       featured: true
     },
@@ -26,7 +24,6 @@ const Projects = () => {
       title: 'Lucy UltraFlex Solar Array',
       description: 'Designed and developed large displacement leaf spring mechanism and deployment motors. Supported critical anomaly resolution that identified snagged lanyard and enabled recovery strategy achieving 100% mission success.',
       image: '/lucy-pic.png',
-      technologies: ['Spring Design', 'Motor Development', 'FEA Analysis', 'Deployment Systems'],
       demo: 'https://www.youtube.com/watch?v=6vjK9vGEw5Q',
       featured: true
     },
@@ -34,7 +31,6 @@ const Projects = () => {
       title: 'Commercial UltraFlex Solar Array',
       description: 'Designed high tension, long-life torsion spring mechanism and high reliability tie-down mechanism. Led motor shock qualification campaign recovery after shock failure, achieving 100% deployment success rate across 16 flight units.',
       image: '/uf-pic.png',
-      technologies: ['Torsion Springs', 'Hold Down Mechanisms', 'Shock Qualification', 'Flight Units'],
       demo: null,
       featured: true
     }
@@ -224,17 +220,7 @@ const Projects = () => {
                   {project.description}
                 </p>
 
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+
 
                 {/* Action Button */}
                 {project.demo && (
