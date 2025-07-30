@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Mechanical Engineer & <span className="gradient-text">Problem Solver</span>
+                Anu Bonthalapati | <span className="gradient-text">Mechanical Engineer</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
                 Seasoned Mechanical Engineer with 9 years of flight proven experience in building <span className="font-bold italic text-primary-600 dark:text-primary-400">mechanisms</span> and <span className="font-bold italic text-primary-600 dark:text-primary-400">deployable structures</span>.
